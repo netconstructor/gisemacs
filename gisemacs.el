@@ -1,12 +1,15 @@
+(add-to-list 'load-path (expand-file-name "~/gisemacs/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/.emacs.d/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/ecb/"))
 
 
 
+(load-file "my-occur.el")
+
+
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "/home/giscloud/.emacs.d/ac-dict")
 (ac-config-default)
-
 
 
 
@@ -52,6 +55,14 @@
 
 
 
+;; Create tags function for using inside emacs
+(setq path-to-ctags "/usr/bin/ctags") 
+(defun create-tags (dir-name)
+  "Create tags file."
+  (interactive "DDirectory: ")
+  (shell-command
+   (format "%s -f %s/TAGS -e -R %s" path-to-ctags dir-name (directory-file-name dir-name)))
+  )
 
 
 
