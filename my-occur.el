@@ -11,8 +11,8 @@ the way in which the standard way uses a neighbor window."
 	   (if (occur-check-existence)
 	             (progn
 		               (delete-other-windows)
-			               (split-window-vertically)
-				               (enlarge-window-vertically -1)
+			               (split-window-vertically 20)
+				               ;(enlarge-window-vertically 10)
 					               (set-cursor-color "green")))
 	     (occur-procede-accordingly))
 
