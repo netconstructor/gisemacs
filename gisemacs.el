@@ -14,6 +14,13 @@
 
 
 
+;; Chrome edit textarea
+(require 'edit-server)
+(edit-server-start)
+
+;; MoinMoin Mode
+(require 'moinmoin-mode)
+
 
 ;; Da ne wrapa linije
 (setq-default truncate-lines t)
@@ -32,7 +39,7 @@
 
 
 
-(setq tramp-default-method "ssh")
+(setq tramp-default-method "scp")
 
 
 (recentf-mode 1)
@@ -52,7 +59,7 @@
 
 (require 'ecb)
 ;(require 'ecb-autoloads)
-
+(setq ecb-tip-of-the-day nil)
 
 
 
