@@ -45,6 +45,11 @@
 ;;(load-file "~/imenu-tree.el")
 
 
+(add-to-list 'load-path (expand-file-name "~/gisemacs/color-theme/"))
+
+
+
+(load-file "~/gisemacs/my-occur.el")
 
 
 (require 'auto-complete-config)
@@ -172,6 +177,7 @@
 (color-theme-gruber-darker)
 
 
+(tool-bar-mode -1)
 (menu-bar-mode -1)
 (global-linum-mode 1)
 (setq linum-format "%d ")
@@ -298,7 +304,14 @@
                ("i18n" (filename . ".*i18n/.*"))
                ("logs" (filename . ".*logs/.*"))))))
 
+			  
+  (ecb-layout-define "markolayout" right nil                                                                                          
+   (if (fboundp (quote ecb-set-methods-buffer)) (ecb-set-methods-buffer) (ecb-set-default-ecb-buffer))                               
+   (dotimes (i 2) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))                                
+   (dotimes (i 1) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))                                
+   )   
 
+ (set-default-font "-adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1")
 
 ;; (custom-set-variables
 
@@ -329,6 +342,7 @@
   ;; If there is more than one, they won't work right.
  '(dired-listing-switches "-lha -h --group-directories-first")
  '(ecb-auto-activate t)
+ '(ecb-fix-window-size t)
  '(ecb-auto-expand-tag-tree (quote all))
  '(ecb-auto-update-methods-after-save t)
  '(ecb-expand-methods-switch-off-auto-expand nil)
