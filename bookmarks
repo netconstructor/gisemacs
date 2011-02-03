@@ -1,0 +1,105 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Biokozmetika header.php"
+ (filename . "/scp:biokozme@ftp.biokozmetika.hr:/home/biokozme/public_html/new/wp-content/themes/biokozmetika/header.php")
+ (front-context-string . "<link rel=\"alter")
+ (rear-context-string . "2_url'); ?>\" />\n")
+ (position . 3336))
+("karte.HR www Amis"
+ (filename . "/ssh:hosting@localhost#24635:/var/www/vhosts/karte.hr/httpdocs/")
+ (front-context-string . "modules\n  drwxr-")
+ (rear-context-string . "0K Apr  3  2010 ")
+ (position . 766))
+("GIS Cloud Amis www"
+ (filename . "/ssh:hosting@localhost#24635:/var/www/vhosts/giscloud.com/httpdocs/")
+ (front-context-string . ".htaccess\n  -rw-")
+ (rear-context-string . "38 Dec 19 04:06 ")
+ (position . 266))
+("Layout.n1.js"
+ (filename . "/var/lib/giscloud/www/assets/omf/mochaui/core/Layout/Layout.n1.js")
+ (front-context-string . "/*\n---\n\nname: La")
+ (rear-context-string)
+ (position . 1))
+("bootstrap.php"
+ (filename . "/var/lib/giscloud/www/application/bootstrap.php")
+ (front-context-string . " *\n * The follow")
+ (rear-context-string . "efault options.\n")
+ (position . 1265))
+("fnApplication.js"
+ (filename . "/var/lib/giscloud/www/assets/fn/fnApplication.js")
+ (front-context-string . "	    //mapcomb.s")
+ (rear-context-string . "name+\"'\";\n	    \n")
+ (position . 6849))
+("projects.php"
+ (filename . "/var/lib/giscloud/www/modules_gc/projects/projects.php")
+ (front-context-string . "<?php\n\nif ( !def")
+ (rear-context-string)
+ (position . 1))
+("projects.js"
+ (filename . "/var/lib/giscloud/www/modules_gc/projects/projects.js")
+ (front-context-string . "\nvar wrkCm = [{\n")
+ (rear-context-string)
+ (position . 1))
+("giscloud_ribbon.php"
+ (filename . "/var/lib/giscloud/www/application/views/theme/giscloud_ribbon.php")
+ (front-context-string . "<div id=\"ribbon\"")
+ (rear-context-string)
+ (position . 1))
+("content.css"
+ (filename . "/var/lib/giscloud/www/assets/themes/content.css")
+ (front-context-string . "\n\nh2{\n	font-size")
+ (rear-context-string)
+ (position . 1))
+("body.js"
+ (filename . "/var/lib/giscloud/www/assets/themes/body.js")
+ (front-context-string . "\n\n			}\n		});\n\n\n	")
+ (rear-context-string . "'false'); ?>});\n")
+ (position . 7102))
+("gctoolbar.js"
+ (filename . "/var/lib/giscloud/www/assets/gctoolbar/gctoolbar.js")
+ (front-context-string . "\n\n/* ***********")
+ (rear-context-string)
+ (position . 1))
+(".htaccess"
+ (filename . "/var/lib/giscloud/www/.htaccess")
+ (front-context-string . "# Turn on URL re")
+ (rear-context-string)
+ (position . 1))
+("compiled.php"
+ (filename . "/var/lib/giscloud/www/assets/compiled.php")
+ (front-context-string . "<?php\n\n\n\n$argc =")
+ (rear-context-string)
+ (position . 1))
+("configuration.inc"
+ (filename . "/var/lib/giscloud/www/configuration.inc")
+ (front-context-string . "<?php \nheader(\"C")
+ (rear-context-string)
+ (position . 1))
+("Apache access log"
+ (filename . "/var/log/apache2/access.log")
+ (front-context-string)
+ (rear-context-string . "Firefox/3.6.13\"\n")
+ (position . 496813))
+("Apache "
+ (filename . "/var/log/apache2/error.log")
+ (front-context-string . "[Tue Jan 25 22:0")
+ (rear-context-string . "giscloud.local/\n")
+ (position . 105147))
+("gisemacs.el"
+ (filename . "~/gisemacs/gisemacs.el")
+ (front-context-string . "                ")
+ (rear-context-string . "ark-save-flag 1)")
+ (position . 4472))
+("clayer.php"
+ (filename . "/var/lib/giscloud/www/modules_gc/layer/clayer.php")
+ (front-context-string . "ije to ubrzaj da")
+ (rear-context-string . "va stvar pa kasn")
+ (position . 34068))
+(".emacs"
+ (filename . "~/.emacs")
+ (front-context-string . "        (prompt ")
+ (rear-context-string . "))) all-files))\n")
+ (position . 583))
+)

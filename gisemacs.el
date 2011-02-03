@@ -1,6 +1,50 @@
 (add-to-list 'load-path (expand-file-name "~/gisemacs/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/.emacs.d/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/ecb/"))
+(add-to-list 'load-path (expand-file-name "~/gisemacs/tree/"))
+
+
+
+;; Imenu tree mode
+;(autoload 'imenu-tree "imenu-tree" "Imenu tree" t)
+;(autoload 'tags-tree "tags-tree" "TAGS tree" t)
+
+
+
+(load-file "~/gisemacs/my-occur.el")
+
+
+(load-file "~/gisemacs/ViewUndo.el")
+
+
+;; Org Mode
+(setq org-startup-indented t) ; Hide *
+(setq org-startup-folded 'showall)
+
+
+
+;; Which function
+(setq which-func-modes t)
+(which-func-mode t)
+
+
+
+
+;; Mark, jump to marker C-xC-x
+(delete-selection-mode 1)
+(transient-mark-mode -1)
+
+
+
+
+;; nXhtml mode
+;(load "~/gisemacs/nxhtml/autostart.el")
+
+
+
+;;(load-file "~/imenu-tree.el")
+
+
 (add-to-list 'load-path (expand-file-name "~/gisemacs/color-theme/"))
 
 
@@ -87,8 +131,13 @@
                                          (tree-buffer-get-root))
                                        10 force-all t t)))
 
-(global-set-key (kbd "\C-c e") 'ecb-goto-window-methods)
-(global-set-key (kbd "\C-c m") 'ecb-expand-methods-nodes2)
+
+;; ECB custom settings
+(global-set-key (kbd "\C-c m") 'ecb-goto-window-methods)
+(global-set-key (kbd "\C-c e") 'ecb-expand-methods-nodes2)
+
+(add-hook 'after-save-hook 'ecb-expand-methods-nodes2)
+(add-hook 'ecb-activate-hook 'ecb-expand-methods-nodes2)
 
 
 
@@ -99,16 +148,26 @@
 
 
 
+;(global-set-key (kbd "\C-x <tab>") 'indent-rigidly 4)
+
+
+
+
 
 ;; Search
 ;; Search and replace
-(global-set-key (kbd "\C-f") 'occur)
+(global-set-key (kbd "\C-f") 'my-occur)
 (global-set-key (kbd "\C-h") 'replace-string)
 
 
 
 
 
+;; Shortcuts for switching modes
+(global-set-key (kbd "M-g p") 'php-mode)
+(global-set-key (kbd "M-g h") 'html-mode)
+(global-set-key (kbd "M-g j") 'js-mode)
+(global-set-key (kbd "M-g n") 'html-mumamo)
 
 
 
@@ -189,19 +248,43 @@
 
 
 
+;; Desktop session
+(global-set-key [C-f12] 'desktop-save)
+(global-set-key [f12] 'desktop-read)
+
+
+
 ;; C-j stavi to na default ENTER
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+
+
+;; Bookmark
+(setq
+   bookmark-default-file "~/gisemacs/bookmarks" ;; keep my ~/ clean
+   bookmark-save-flag 1)                        ;; autosave each change)
+
+
+;; 4 space indent
+(setq sgml-basic-offset 4)
+
+
+;; za sve modove izvedene od cmode da ne uvlaci viticastee zagrade
+(dolist (mode-hook '(c-mode-hook))
+    (add-hook mode-hook (lambda nil (c-set-style "stroustrup"))))
+
+(dolist (mode-hook '(css-mode-hook))
+    (add-hook mode-hook (lambda nil (css-set-style "stroustrup"))))
 
 
 
 
 ;; Scroll page na alt gore/dolje
 ;; bolje nego na Ctrl jer je to po defaultu jump more lines, kao section
-(global-set-key (kbd "M-<up>")  '(lambda nil (interactive) (scroll-down 1)))
-(global-set-key (kbd "M-<down>") '(lambda nil (interactive) (scroll-up 1)))
-(global-set-key (kbd "M-<right>") '(lambda nil (interactive) (scroll-left 1)))
-(global-set-key (kbd "M-<left>") '(lambda nil (interactive) (scroll-right 1)))
+(global-set-key (kbd "M-<up>")  '(lambda nil (interactive) (scroll-down 3)))
+(global-set-key (kbd "M-<down>") '(lambda nil (interactive) (scroll-up 3)))
+(global-set-key (kbd "M-<right>") '(lambda nil (interactive) (scroll-left 3)))
+(global-set-key (kbd "M-<left>") '(lambda nil (interactive) (scroll-right 3)))
 
 
 
@@ -237,11 +320,34 @@
 
  (set-default-font "-adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1")
 
+;; (custom-set-variables
+
+;;  '(ecb-auto-activate t)
+;;  '(ecb-auto-expand-tag-tree (quote all))
+;;  '(ecb-auto-update-methods-after-save t)
+;;  '(ecb-expand-methods-switch-off-auto-expand nil)
+;;  '(ecb-layout-name "markolayout")
+;;  '(ecb-methods-nodes-expand-spec (quote all))
+;;  '(ecb-options-version "2.40")
+;;  '(ecb-tag-jump-sets-mark nil)
+;;  '(ecb-toggle-auto-expand-tag-tree 1)
+;;  '(ecb-windows-width 0.2))
+;; (custom-set-faces
+
+;;  '(linum ((t (:inherit (shadow default) :background "color-236")))))
+;; (put 'scroll-left 'disabled nil)
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(dired-listing-switches "-lha -h --group-directories-first")
  '(ecb-auto-activate t)
  '(ecb-fix-window-size t)
  '(ecb-auto-expand-tag-tree (quote all))
@@ -258,5 +364,5 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(linum ((t (:inherit (shadow default) :background "color-236")))))
-(put 'scroll-left 'disabled nil)
+ '(linum ((t (:inherit (shadow default) :background "color-236"))))
+ '(which-func ((((class color) (min-colors 88) (background dark)) (:foreground "color-255")))))
