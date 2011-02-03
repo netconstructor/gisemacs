@@ -14,7 +14,7 @@
 (load-file "~/gisemacs/my-occur.el")
 
 
-(load-file "~/gisemacs/ViewUndo.el")
+;(load-file "~/gisemacs/ViewUndo.el")
 
 
 ;; Org Mode
