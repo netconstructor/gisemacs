@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Biokozmetika header.php"
+(("Mastercharter Online (Theme dir)"
+ (filename . "/ftp:web2@kiki.mastercharter.com:/wp-content/themes/mastercharter/header.php")
+ (front-context-string . "<!DOCTYPE html P")
+ (rear-context-string)
+ (position . 1))
+("Geotrag Newweb"
+ (filename . "/ssh:hosting@localhost#24635:/var/www/vhosts/geotrag.com/httpdocs/newweb/wp-content/themes/omnia/")
+ (front-context-string . "iepngfix\n  drwxr")
+ (rear-context-string . "0K Dec 17 18:33 ")
+ (position . 266))
+("Biokozmetika"
  (filename . "/scp:biokozme@ftp.biokozmetika.hr:/home/biokozme/public_html/new/wp-content/themes/biokozmetika/header.php")
  (front-context-string . "<link rel=\"alter")
  (rear-context-string . "2_url'); ?>\" />\n")
