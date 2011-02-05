@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Biokozmetika header.php"
+(("GIS Cloud Local Ubuntu"
+ (filename . "/plink:giscloud@giscloud.local:/var/lib/giscloud/www/")
+ (front-context-string . ".emacs.desktop\n ")
+ (rear-context-string . "246 01-29 01:58 ")
+ (position . 237))
+("GIS Cloud Unstable"
+ (filename . "/plink:hosting@localhost#24635:/var/giscloud/www/httpdocs/")
+ (front-context-string . ".gitmodules\n  -r")
+ (rear-context-string . "163 01-13 11:53 ")
+ (position . 229))
+("Biokozmetika header.php"
  (filename . "/scp:biokozme@ftp.biokozmetika.hr:/home/biokozme/public_html/new/wp-content/themes/biokozmetika/header.php")
  (front-context-string . "<link rel=\"alter")
  (rear-context-string . "2_url'); ?>\" />\n")

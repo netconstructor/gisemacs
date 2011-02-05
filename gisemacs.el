@@ -13,6 +13,8 @@
 
 
 
+;(load-file "~/gisemacs/ecb.el")
+
 (load-file "~/gisemacs/my-occur.el")
 
 
