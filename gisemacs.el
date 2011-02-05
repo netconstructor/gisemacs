@@ -7,6 +7,9 @@
 
 
 
+(setq ange-ftp-ftp-program-name "C:/Program Files/Emacs/EmacsW32/gnuwin32/bin/ftp.exe")
+
+
 ;; Imenu tree mode
 ;(autoload 'imenu-tree "imenu-tree" "Imenu tree" t)
 ;(autoload 'tags-tree "tags-tree" "TAGS tree" t)
