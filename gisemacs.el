@@ -5,6 +5,38 @@
 (add-to-list 'load-path (expand-file-name "~/gisemacs/tree/"))
 
 
+(setq visible-bell t)
+
+;; Za windows
+(getenv "PATH")
+
+; example of setting env var named “path”
+; by appending a new path to existing path
+(setenv "PATH"
+	(concat
+	 "C:/cygwin/usr/local/bin" ";"
+	 "C:/cygwin/usr/bin" ";"
+	 "C:/cygwin/bin" ";"
+	 "C:/Program Files/Emacs/EmacsW32/gnuwin32/bin" ";"
+	 (getenv "PATH")
+	 )
+	)
+
+
+					;(when (string-equal system-type "windows-nt")
+(setq exec-path
+      '(
+	"C:/Program Files/Emacs/emacs/bin/"
+	"C:/Program Files/Emacs/EmacsW32/gnuwin32/bin/"
+	"C:/Windows/system32/"
+	"C:/Windows/"
+	"C:/Windows/System32/Wbem/"
+	"C:/Windows/system32/WindowsPowerShell/v1.0/"
+	)
+      )
+					;)
+
+
 
 
 (setq ange-ftp-ftp-program-name "C:/Program Files/Emacs/EmacsW32/gnuwin32/bin/ftp.exe")
