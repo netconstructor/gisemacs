@@ -37,8 +37,11 @@
 					;)
 
 
+;; GPG
+(setq epa-file-cache-passphrase-for-symmetric-encryption t)
 
 
+;; FTP
 (setq ange-ftp-ftp-program-name "C:/Program Files/Emacs/EmacsW32/gnuwin32/bin/ftp.exe")
 
 
