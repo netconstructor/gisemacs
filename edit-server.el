@@ -79,9 +79,9 @@ favorite minor modes or add key bindings."
 
 (defcustom edit-server-new-frame-alist
   '((name . "Emacs TEXTAREA")
-    (width . 80)
+    (width . 100)
     (height . 25)
-    (minibuffer . t)
+    ;;(minibuffer . t)
     (menu-bar-lines . t))
   "Frame parameters for new frames.  See `default-frame-alist' for examples.
 If nil, the new frame will use the existing `default-frame-alist' values."

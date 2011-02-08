@@ -2,7 +2,32 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("GIS Cloud Local Ubuntu"
+(("Geotrag Docs Online"
+ (filename . "/plink:hosting@localhost#24635:/var/www/vhosts/geotrag.com/httpdocs/docs/")
+ (front-context-string . "hr\n  drwxr-xr-x ")
+ (rear-context-string . "096 2010-06-28  ")
+ (position . 497))
+("GeoTrag"
+ (filename . "/plink:hosting@localhost#24635:/var/www/vhosts/geotrag.com/httpdocs/")
+ (front-context-string . ".htaccess\n  -rw-")
+ (rear-context-string . "476 01-28 12:20 ")
+ (position . 263))
+("Biokozmetika PSCP"
+ (filename . "/pscp:biokozme@ftp.biokozmetika.hr:/home/biokozme/public_html/wp-content/themes/biokozmetika/")
+ (front-context-string . ".DS_Store\n  -rw-")
+ (rear-context-string . "148 10-13 14:03 ")
+ (position . 270))
+("Biokozmetika FTP"
+ (filename . "/ftp:biokozme@ftp.biokozmetika.hr:/www/wp-content/themes/biokozmetika/")
+ (front-context-string . ".DS_Store\n  -rw-")
+ (rear-context-string . "48 Oct 13 13:03 ")
+ (position . 275))
+("Mastercharter Online"
+ (filename . "/ftp:web2@kiki.mastercharter.com:/wp-content/themes/mastercharter/")
+ (front-context-string . "view-category-li")
+ (rear-context-string . "11 Jan 02  2010 ")
+ (position . 3296))
+("GIS Cloud Local Ubuntu"
  (filename . "/plink:giscloud@giscloud.local:/var/lib/giscloud/www/")
  (front-context-string . ".emacs.desktop\n ")
  (rear-context-string . "246 01-29 01:58 ")
@@ -12,11 +37,6 @@
  (front-context-string . ".gitmodules\n  -r")
  (rear-context-string . "163 01-13 11:53 ")
  (position . 229))
-("Biokozmetika header.php"
- (filename . "/scp:biokozme@ftp.biokozmetika.hr:/home/biokozme/public_html/new/wp-content/themes/biokozmetika/header.php")
- (front-context-string . "<link rel=\"alter")
- (rear-context-string . "2_url'); ?>\" />\n")
- (position . 3336))
 ("karte.HR www Amis"
  (filename . "/ssh:hosting@localhost#24635:/var/www/vhosts/karte.hr/httpdocs/")
  (front-context-string . "modules\n  drwxr-")

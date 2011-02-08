@@ -6,6 +6,8 @@
 
 
 (setq visible-bell t)
+(setq mouse-drag-copy-region nil)
+(setq blink-matching-paren t)
 
 ;; Za windows
 (getenv "PATH")
@@ -18,6 +20,7 @@
 	 "C:/cygwin/usr/bin" ";"
 	 "C:/cygwin/bin" ";"
 	 "C:/Program Files/Emacs/EmacsW32/gnuwin32/bin" ";"
+	 "C:/Program Files/GNU/GnuPG" ";"
 	 (getenv "PATH")
 	 )
 	)
@@ -28,6 +31,7 @@
       '(
 	"C:/Program Files/Emacs/emacs/bin/"
 	"C:/Program Files/Emacs/EmacsW32/gnuwin32/bin/"
+	"C:/Program Files/GNU/GnuPG/"
 	"C:/Windows/system32/"
 	"C:/Windows/"
 	"C:/Windows/System32/Wbem/"
@@ -36,6 +40,15 @@
       )
 					;)
 
+
+
+(load-file "~/gisemacs/highlight-symbol.el")
+(highlight-symbol-mode 1) ;; !!! ovo ne radi jer ga ne ukljuci po defaultu za svaki mode
+(setq highlight-symbol-idle-delay 0)
+(global-set-key [(control f3)] 'highlight-symbol-at-point)
+(global-set-key [f3] 'highlight-symbol-next)
+(global-set-key [(shift f3)] 'highlight-symbol-prev)
+(global-set-key [(meta f3)] 'highlight-symbol-prev)
 
 ;; GPG
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
@@ -335,7 +348,13 @@
 
 
 
- (set-default-font "-adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1")
+;(set-default-font "-adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1")
+;(add-to-list 'default-frame-alist '(font . "-adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1" ))
+(add-to-list 'default-frame-alist '(font . "-outline-Consolas-medium-r-normal-normal-18-90-96-96-c-*-iso8859-1" ))
+
+;(set-default-font "-outline-Consolas-medium-r-normal-normal-18-90-96-96-c-*-iso8859-1")
+
+;(add-to-list 'default-frame-alist '(font . "-outline-Courier New-normal-r-normal-normal-15-112-96-96-c-90-iso8859-1"))
 
 ;; (custom-set-variables
 
