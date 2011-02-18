@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Geotrag Docs Online"
+(("Geotrag Newwweb Plink"
+ (filename . "/plink:hosting@localhost#24635:/var/www/vhosts/geotrag.com/httpdocs/newweb/wp-content/themes/omnia/")
+ (front-context-string . "home.php~\n  drwx")
+ (rear-context-string . "790 12-17 16:44 ")
+ (position . 1301))
+("Geotrag Docs Online"
  (filename . "/plink:hosting@localhost#24635:/var/www/vhosts/geotrag.com/httpdocs/docs/")
  (front-context-string . "hr\n  drwxr-xr-x ")
  (rear-context-string . "096 2010-06-28  ")

@@ -66,6 +66,8 @@
 
 ;(load-file "~/gisemacs/ecb.el")
 
+(load-file "~/gisemacs/actionscript-mode.el")
+
 (load-file "~/gisemacs/my-occur.el")
 
 
@@ -202,6 +204,7 @@
 (global-set-key (kbd "M-g h") 'html-mode)
 (global-set-key (kbd "M-g j") 'js-mode)
 (global-set-key (kbd "M-g n") 'html-mumamo)
+(global-set-key (kbd "M-g a") 'actionscript-mode)
 
 
 
