@@ -22,22 +22,17 @@
 
 
 
-(custom-set-variables
-  (ecb-layout-define "markolayout" right nil                                                                                          
-   (if (fboundp (quote ecb-set-methods-buffer)) (ecb-set-methods-buffer) (ecb-set-default-ecb-buffer))                               
-   (dotimes (i 2) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))                                
-   (dotimes (i 1) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))                                
-   )   
- '(dired-listing-switches "-lha -h --group-directories-first")
- '(ecb-auto-activate t)
- '(ecb-fix-window-size t)
- '(ecb-auto-expand-tag-tree (quote all))
- '(ecb-auto-update-methods-after-save t)
- '(ecb-expand-methods-switch-off-auto-expand nil)
- '(ecb-layout-name "markolayout")
- '(ecb-methods-nodes-expand-spec (quote all))
- '(ecb-options-version "2.40")
- '(ecb-tag-jump-sets-mark nil)
- '(ecb-toggle-auto-expand-tag-tree 1)
- '(ecb-windows-width 0.2))
-
+;; (custom-set-variables
+;;   (ecb-layout-define "markolayout" right nil                                                                                          
+;;    (if (fboundp (quote ecb-set-methods-buffer)) (ecb-set-methods-buffer) (ecb-set-default-ecb-buffer))                               
+;;    (dotimes (i 2) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))                                
+;;    (dotimes (i 1) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))                                
+;;    )   
+;;  '(dired-listing-switches "-lha -h --group-directories-first")
+;;  '(ecb-auto-activate t)
+;;  '(ecb-fix-window-size t)
+;;  '(ecb-auto-expand-tag-tree (quote all))
+;;  '(ecb-auto-update-methods-after-save t)
+;;  '(ecb-expand-methods-switch-off-auto-expand nil)
+;;  '(ecb-layout-name "markolayout")
+;; )

@@ -65,7 +65,7 @@
 
 
 
-;(load-file "~/gisemacs/ecb.el")
+;;(load-file "~/gisemacs/ecb.el")
 
 (load-file "~/gisemacs/actionscript-mode.el")
 
