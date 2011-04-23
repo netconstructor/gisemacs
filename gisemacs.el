@@ -1,4 +1,5 @@
-﻿(add-to-list 'load-path (expand-file-name "~/gisemacs/"))
+﻿;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/"))
+(add-to-list 'load-path (expand-file-name "~/gisemacs/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/.emacs.d/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/cedet-1.0pre7/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/ecb/"))
@@ -14,30 +15,30 @@
 
 ; example of setting env var named “path”
 ; by appending a new path to existing path
-(setenv "PATH"
-	(concat
-	 "C:/cygwin/usr/local/bin" ";"
-	 "C:/cygwin/usr/bin" ";"
-	 "C:/cygwin/bin" ";"
-	 "C:/Program Files/Emacs/EmacsW32/gnuwin32/bin" ";"
-	 "C:/Program Files/GNU/GnuPG" ";"
-	 (getenv "PATH")
-	 )
-	)
+;; (setenv "PATH"
+;; 	(concat
+;; 	 "C:/cygwin/usr/local/bin" ";"
+;; 	 "C:/cygwin/usr/bin" ";"
+;; 	 "C:/cygwin/bin" ";"
+;; 	 "C:/Program Files/Emacs/EmacsW32/gnuwin32/bin" ";"
+;; 	 "C:/Program Files/GNU/GnuPG" ";"
+;; 	 (getenv "PATH")
+;; 	 )
+;; 	)
 
 
 					;(when (string-equal system-type "windows-nt")
-(setq exec-path
-      '(
-	"C:/Program Files/Emacs/emacs/bin/"
-	"C:/Program Files/Emacs/EmacsW32/gnuwin32/bin/"
-	"C:/Program Files/GNU/GnuPG/"
-	"C:/Windows/system32/"
-	"C:/Windows/"
-	"C:/Windows/System32/Wbem/"
-	"C:/Windows/system32/WindowsPowerShell/v1.0/"
-	)
-      )
+;; (setq exec-path
+;;       '(
+;; 	"C:/Program Files/Emacs/emacs/bin/"
+;; 	"C:/Program Files/Emacs/EmacsW32/gnuwin32/bin/"
+;; 	"C:/Program Files/GNU/GnuPG/"
+;; 	"C:/Windows/system32/"
+;; 	"C:/Windows/"
+;; 	"C:/Windows/System32/Wbem/"
+;; 	"C:/Windows/system32/WindowsPowerShell/v1.0/"
+;; 	)
+;;       )
 					;)
 
 
@@ -105,14 +106,7 @@
 (add-to-list 'load-path (expand-file-name "~/gisemacs/color-theme/"))
 
 
-
 (load-file "~/gisemacs/my-occur.el")
-
-
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/giscloud/.emacs.d/ac-dict")
-(ac-config-default)
-
 
 
 ;; Chrome edit textarea
@@ -383,3 +377,11 @@
   ;; If there is more than one, they won't work right.
  '(linum ((t (:inherit (shadow default) :background "color-236"))))
  '(which-func ((((class color) (min-colors 88) (background dark)) (:foreground "color-255")))))
+
+
+
+;; Auto Complete, zahtjeva 23.2 verziju, ako je nema izbacuje called-intera....
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/gisemacs/ac-dict")
+(require 'auto-complete-config)
+(ac-config-default)
