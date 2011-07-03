@@ -4,11 +4,17 @@
 (add-to-list 'load-path (expand-file-name "~/gisemacs/cedet-1.0pre7/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/ecb/"))
 (add-to-list 'load-path (expand-file-name "~/gisemacs/tree/"))
+(add-to-list 'load-path (expand-file-name "~/gisemacs/simplenote.el/"))
 
 
 (setq visible-bell t)
 (setq mouse-drag-copy-region nil)
 (setq blink-matching-paren t)
+
+;; Remove tabs
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
 
 ;; Za windows
 (getenv "PATH")
@@ -40,6 +46,12 @@
 ;; 	)
 ;;       )
 					;)
+
+(require 'simplenote)
+(setq simplenote-email "marko@giscloud.com")
+(setq simplenote-password "987412365")
+(simplenote-setup)
+
 
 
 
@@ -118,7 +130,7 @@
 
 
 ;; Da ne wrapa linije
-(setq-default truncate-lines t)
+;(setq-default truncate-lines t)
 
 
 (show-paren-mode 1)
@@ -199,6 +211,7 @@
 (global-set-key (kbd "M-g j") 'js-mode)
 (global-set-key (kbd "M-g n") 'html-mumamo)
 (global-set-key (kbd "M-g a") 'actionscript-mode)
+(global-set-key (kbd "M-g o") 'org-mode)
 
 
 
