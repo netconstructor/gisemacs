@@ -1,14 +1,16 @@
 ﻿;;(add-to-list 'load-path (expand-file-name "/home/marko/.emacs.d/"))
-(add-to-list 'load-path (expand-file-name "gisemacs/"))
-(add-to-list 'load-path (expand-file-name "gisemacs/.emacs.d/"))
-(add-to-list 'load-path (expand-file-name "gisemacs/cedet-1.0pre7/"))
-(add-to-list 'load-path (expand-file-name "gisemacs/ecb/"))
-(add-to-list 'load-path (expand-file-name "gisemacs/tree/"))
 
-(add-to-list 'load-path (expand-file-name "gisemacs/color-theme/"))
-(load-file "gisemacs/my-occur.el")
-(load-file "gisemacs/highlight-symbol.el")
-(load-file "gisemacs/actionscript-mode.el")
+(add-to-list 'load-path (getenv "GISEMACS"))
+
+;; (add-to-list 'load-path (expand-file-name "gisemacs/cedet-1.0pre7/"))
+;; (add-to-list 'load-path (expand-file-name "gisemacs/ecb/"))
+;; (add-to-list 'load-path (expand-file-name "gisemacs/tree/"))
+
+(add-to-list 'load-path (expand-file-name (concat (getenv "GISEMACS") "/color-theme/")))
+
+(load-file (concat (getenv "GISEMACS") "/my-occur.el"))
+(load-file (concat (getenv "GISEMACS") "/highlight-symbol.el"))
+(load-file (concat (getenv "GISEMACS") "/actionscript-mode.el"))
 
 ;;(load-file "/home/marko/gisemacs/ecb.el")
 ;(load-file "gisemacs/ViewUndo.el")
@@ -172,9 +174,9 @@
 
 
 
-;(require 'color-theme)
+(require 'color-theme)
 ;(require 'color-theme-tangotango)
-;(color-theme-initialize)
+(color-theme-initialize)
 ;(color-theme-tangotango)
 
 (require 'color-theme-gruber-darker)
@@ -347,7 +349,6 @@
 
 
 ;; Auto Complete, zahtjeva 23.2 verziju, ako je nema izbacuje called-intera....
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "gisemacs/ac-dict")
-(require 'auto-complete-config)
-(ac-config-default)
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "ac-dict")
+;; (ac-config-default)
