@@ -53,7 +53,7 @@
 ;;       )
 					;)
 
-;(require 'php-mode)
+(require 'php-mode)
 
 
 
@@ -349,6 +349,6 @@
 
 
 ;; Auto Complete, zahtjeva 23.2 verziju, ako je nema izbacuje called-intera....
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "ac-dict")
-;; (ac-config-default)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "ac-dict")
+(ac-config-default)
