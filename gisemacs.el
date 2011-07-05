@@ -1,10 +1,20 @@
 ﻿;;(add-to-list 'load-path (expand-file-name "/home/marko/.emacs.d/"))
-(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/"))
-(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/.emacs.d/"))
-(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/cedet-1.0pre7/"))
-(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/ecb/"))
-(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/tree/"))
+(add-to-list 'load-path (expand-file-name "gisemacs/"))
+(add-to-list 'load-path (expand-file-name "gisemacs/.emacs.d/"))
+(add-to-list 'load-path (expand-file-name "gisemacs/cedet-1.0pre7/"))
+(add-to-list 'load-path (expand-file-name "gisemacs/ecb/"))
+(add-to-list 'load-path (expand-file-name "gisemacs/tree/"))
 
+(add-to-list 'load-path (expand-file-name "gisemacs/color-theme/"))
+(load-file "gisemacs/my-occur.el")
+(load-file "gisemacs/highlight-symbol.el")
+(load-file "gisemacs/actionscript-mode.el")
+
+;;(load-file "/home/marko/gisemacs/ecb.el")
+;(load-file "gisemacs/ViewUndo.el")
+;; nXhtml mode
+;(load "/home/marko/gisemacs/nxhtml/autostart.el")
+;;(load-file "/home/marko/imenu-tree.el")
 
 (setq visible-bell t)
 (setq mouse-drag-copy-region nil)
@@ -41,9 +51,10 @@
 ;;       )
 					;)
 
+;(require 'php-mode)
 
 
-(load-file "/home/marko/gisemacs/highlight-symbol.el")
+
 (highlight-symbol-mode 1) ;; !!! ovo ne radi jer ga ne ukljuci po defaultu za svaki mode
 (setq highlight-symbol-idle-delay 0)
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
@@ -65,14 +76,6 @@
 
 
 
-;;(load-file "/home/marko/gisemacs/ecb.el")
-
-(load-file "/home/marko/gisemacs/actionscript-mode.el")
-
-(load-file "/home/marko/gisemacs/my-occur.el")
-
-
-;(load-file "/home/marko/gisemacs/ViewUndo.el")
 
 
 ;; Org Mode
@@ -92,37 +95,18 @@
 (delete-selection-mode 1)
 (transient-mark-mode -1)
 
-
-
-
-;; nXhtml mode
-;(load "/home/marko/gisemacs/nxhtml/autostart.el")
-
-
-
-;;(load-file "/home/marko/imenu-tree.el")
-
-
-(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/color-theme/"))
-
-
-(load-file "/home/marko/gisemacs/my-occur.el")
-
-
 ;; Chrome edit textarea
-(require 'edit-server)
-(edit-server-start)
+;(require 'edit-server)
+;(edit-server-start)
 
 ;; MoinMoin Mode
-(require 'moinmoin-mode)
+;(require 'moinmoin-mode)
 
 
 ;; Da ne wrapa linije
 (setq-default truncate-lines t)
 
-
 (show-paren-mode 1)
-
 
 
 ;; Tags list
@@ -132,10 +116,7 @@
 (set-face-foreground 'show-paren-match-face "color-43")
 (set-face-attribute 'show-paren-match-face nil :weight 'extra-bold)
 
-
-
 (setq tramp-default-method "scp")
-
 
 (recentf-mode 1)
 
@@ -150,14 +131,6 @@
 (global-set-key "\C-x\C-r" 'recentf-open-files-compl) ;; old map ‘find-file-read-only’
 
 
-
-
-
-
-
-
-
-
 ;; Create tags function for using inside emacs
 (setq path-to-ctags "/usr/bin/ctags") 
 (defun create-tags (dir-name)
@@ -170,19 +143,12 @@
 
 
 
-
-
 (global-set-key (kbd "\C-q") 'kill-buffer-and-window)
 (global-set-key (kbd "\C-cc") 'comment-or-uncomment-region)
 
 
 
-
 ;(global-set-key (kbd "\C-x <tab>") 'indent-rigidly 4)
-
-
-
-
 
 ;; Search
 ;; Search and replace
@@ -204,7 +170,7 @@
 
 
 
-(require 'php-mode)
+
 
 ;(require 'color-theme)
 ;(require 'color-theme-tangotango)
@@ -292,7 +258,7 @@
 
 ;; Bookmark
 (setq
-   bookmark-default-file "/home/marko/gisemacs/bookmarks" ;; keep my /home/marko/ clean
+   bookmark-default-file "gisemacs/bookmarks" ;; keep my /home/marko/ clean
    bookmark-save-flag 1)                        ;; autosave each change)
 
 
@@ -382,6 +348,6 @@
 
 ;; Auto Complete, zahtjeva 23.2 verziju, ako je nema izbacuje called-intera....
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/marko/gisemacs/ac-dict")
+(add-to-list 'ac-dictionary-directories "gisemacs/ac-dict")
 (require 'auto-complete-config)
 (ac-config-default)
