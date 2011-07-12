@@ -1,20 +1,14 @@
-﻿;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/"))
-(add-to-list 'load-path (expand-file-name "~/gisemacs/"))
-(add-to-list 'load-path (expand-file-name "~/gisemacs/.emacs.d/"))
-(add-to-list 'load-path (expand-file-name "~/gisemacs/cedet-1.0pre7/"))
-(add-to-list 'load-path (expand-file-name "~/gisemacs/ecb/"))
-(add-to-list 'load-path (expand-file-name "~/gisemacs/tree/"))
-(add-to-list 'load-path (expand-file-name "~/gisemacs/simplenote.el/"))
+﻿;;(add-to-list 'load-path (expand-file-name "/home/marko/.emacs.d/"))
+(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/"))
+(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/.emacs.d/"))
+(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/cedet-1.0pre7/"))
+(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/ecb/"))
+(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/tree/"))
 
 
 (setq visible-bell t)
 (setq mouse-drag-copy-region nil)
 (setq blink-matching-paren t)
-
-;; Remove tabs
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-
 
 ;; Za windows
 (getenv "PATH")
@@ -47,15 +41,9 @@
 ;;       )
 					;)
 
-(require 'simplenote)
-(setq simplenote-email "marko@giscloud.com")
-(setq simplenote-password "987412365")
-(simplenote-setup)
 
 
-
-
-(load-file "~/gisemacs/highlight-symbol.el")
+(load-file "/home/marko/gisemacs/highlight-symbol.el")
 (highlight-symbol-mode 1) ;; !!! ovo ne radi jer ga ne ukljuci po defaultu za svaki mode
 (setq highlight-symbol-idle-delay 0)
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
@@ -77,14 +65,14 @@
 
 
 
-;;(load-file "~/gisemacs/ecb.el")
+;;(load-file "/home/marko/gisemacs/ecb.el")
 
-(load-file "~/gisemacs/actionscript-mode.el")
+(load-file "/home/marko/gisemacs/actionscript-mode.el")
 
-(load-file "~/gisemacs/my-occur.el")
+(load-file "/home/marko/gisemacs/my-occur.el")
 
 
-;(load-file "~/gisemacs/ViewUndo.el")
+;(load-file "/home/marko/gisemacs/ViewUndo.el")
 
 
 ;; Org Mode
@@ -108,17 +96,17 @@
 
 
 ;; nXhtml mode
-;(load "~/gisemacs/nxhtml/autostart.el")
+;(load "/home/marko/gisemacs/nxhtml/autostart.el")
 
 
 
-;;(load-file "~/imenu-tree.el")
+;;(load-file "/home/marko/imenu-tree.el")
 
 
-(add-to-list 'load-path (expand-file-name "~/gisemacs/color-theme/"))
+(add-to-list 'load-path (expand-file-name "/home/marko/gisemacs/color-theme/"))
 
 
-(load-file "~/gisemacs/my-occur.el")
+(load-file "/home/marko/gisemacs/my-occur.el")
 
 
 ;; Chrome edit textarea
@@ -130,7 +118,7 @@
 
 
 ;; Da ne wrapa linije
-;(setq-default truncate-lines t)
+(setq-default truncate-lines t)
 
 
 (show-paren-mode 1)
@@ -211,7 +199,6 @@
 (global-set-key (kbd "M-g j") 'js-mode)
 (global-set-key (kbd "M-g n") 'html-mumamo)
 (global-set-key (kbd "M-g a") 'actionscript-mode)
-(global-set-key (kbd "M-g o") 'org-mode)
 
 
 
@@ -305,7 +292,7 @@
 
 ;; Bookmark
 (setq
-   bookmark-default-file "~/gisemacs/bookmarks" ;; keep my ~/ clean
+   bookmark-default-file "/home/marko/gisemacs/bookmarks" ;; keep my /home/marko/ clean
    bookmark-save-flag 1)                        ;; autosave each change)
 
 
@@ -395,6 +382,6 @@
 
 ;; Auto Complete, zahtjeva 23.2 verziju, ako je nema izbacuje called-intera....
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/gisemacs/ac-dict")
+(add-to-list 'ac-dictionary-directories "/home/marko/gisemacs/ac-dict")
 (require 'auto-complete-config)
 (ac-config-default)
